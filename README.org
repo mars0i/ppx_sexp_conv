@@ -12,7 +12,7 @@ type sexp = Atom of string | List of sexp list
 #+end_src
 
 and are rendered as parenthesized lists of strings, /e.g./ =(This (is
-an) (s expression))=.
+an) (s expression))=.  
 
 =ppx_sexp_conv= fits into the [[https://github.com/whitequark/ppx_deriving][=ppx_deriving=]] framework, so you can
 invoke it the same way you invoke any other deriving plug-in.  Thus,
@@ -41,6 +41,8 @@ open Sexplib.Std
 
 If you're using [[https://github.com/janestreet/core][=Core=]] or [[https://github.com/janestreet/core_kernel][=Core_kernel=]], you can get the same effect with
 =open Core= or =open Core_kernel.Std=.
+In `utop`, you may need to `#require "core.top"` for s-expressions to display 
+properly.
 
 It's also possible to construct converters based on type expressions,
 /i.e./:
