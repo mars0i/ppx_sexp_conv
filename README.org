@@ -41,7 +41,7 @@ open Sexplib.Std
 
 If you're using [[https://github.com/janestreet/core][=Core=]] or [[https://github.com/janestreet/core_kernel][=Core_kernel=]], you can get the same effect with
 =open Core= or =open Core_kernel.Std=.
-In =utop=, you may need to =#require "core.top"= for s-expressions to display properly.
+In =utop=, you may need to = #require "core.top"= for s-expressions to display properly.
 
 It's also possible to construct converters based on type expressions,
 /i.e./:
